@@ -82,7 +82,7 @@ int main() {
     StringGenerator gen = StringGenerator();
     vector<vector<string> > random = gen.multiple_random(100, 3000, 100);
     ofstream fout;
-    fout.open("random.txt");
+    fout.open("test_data/random.txt");
     for (int i = 0; i < random.size(); i++) {
         fout << random[i].size() << " ";
         for (int j = 0; j < random[i].size(); ++j) {
@@ -92,7 +92,7 @@ int main() {
     }
     fout.close();
     vector<vector<string> > reversed = gen.multiple_reversed(100, 3000, 100);
-    fout.open("reversed.txt");
+    fout.open("test_data/reversed.txt");
     for (int i = 0; i < reversed.size(); i++) {
         fout << reversed[i].size() << " ";
         for (int j = 0; j < reversed[i].size(); ++j) {
@@ -102,7 +102,7 @@ int main() {
     }
     fout.close();
     vector<vector<string> > almost = gen.multiple_almost(100, 3000, 100);
-    fout.open("almost.txt");
+    fout.open("test_data/almost.txt");
     for (int i = 0; i < almost.size(); i++) {
         fout << almost[i].size() << " ";
         for (int j = 0; j < almost[i].size(); ++j) {
