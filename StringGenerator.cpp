@@ -48,7 +48,7 @@ public:
         vector<string> sample = random(end);
         vector<vector<string> > res;
         res.reserve((end - start) % step + 1);
-        for (int i = start; i < end; i += step) {
+        for (int i = start; i <= end; i += step) {
             res.emplace_back(vector<string>(sample.begin(), sample.begin() + i));
         }
         return res;
@@ -57,7 +57,7 @@ public:
         vector<string> sample = reversed(end);
         vector<vector<string> > res;
         res.reserve((end - start) % step + 1);
-        for (int i = start; i < end; i += step) {
+        for (int i = start; i <= end; i += step) {
             res.emplace_back(vector<string>(sample.begin(), sample.begin() + i));
         }
         return res;
@@ -66,7 +66,7 @@ public:
         vector<string> sample = almost(end);
         vector<vector<string> > res;
         res.reserve((end - start) % step + 1);
-        for (int i = start; i < end; i += step) {
+        for (int i = start; i <= end; i += step) {
             res.emplace_back(vector<string>(sample.begin(), sample.begin() + i));
         }
         return res;
